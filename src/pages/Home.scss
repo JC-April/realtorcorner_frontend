@@ -1,0 +1,40 @@
+.Home {
+  width: 100%;
+  min-height: 95vh;
+  background: linear-gradient(rgba(15, 0, 58, 0.5), rgba(15, 0, 58, 0.5)),
+    url("../assets/newhouse2.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero_text {
+  text-align: right;
+  max-width: 800px;
+
+  h1 {
+    font-size: 60px;
+    font-weight: 600;
+  }
+  p {
+    line-height: 1.4;
+    margin: 10px auto 20px;
+  }
+
+  .greeting {
+    font-size: larger;
+    line-height: 0.7;
+
+    a {
+      border: 2px solid #ff7f50;
+      border-radius: 5px;
+
+      &:hover {
+        border-color: #faf8f8;
+        color: #ff7f50;
+      }
+    }
+  }
+}
