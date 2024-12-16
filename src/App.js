@@ -18,7 +18,8 @@ import UpdateProperty from "./pages/UpdateProperty";
 function App() {
   return (
     <div className="App">
-      <Router>
+      #added basename
+      <Router basename="/">
         <AuthProvider>
           <Navbar />
           <main className="content">
