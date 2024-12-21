@@ -1,12 +1,6 @@
 import React, { useRef } from "react";
 import "./About.scss";
 import about_duplex from "../assets/about_duplex.jpg";
-import user_1 from "../assets/user-1.png";
-import user_2 from "../assets/user-2.png";
-import user_3 from "../assets/user-3.png";
-import user_4 from "../assets/user-4.png";
-import next_icon from "../assets/next-icon.png";
-import back_icon from "../assets/back-icon.png";
 import call_icon from "../assets/call_icon.svg";
 import facebook_icon from "../assets/facebook_icon.svg";
 import home_icon from "../assets/home_icon.svg";
@@ -14,25 +8,9 @@ import instagram_icon from "../assets/instagram_icon.svg";
 import mail_icon from "../assets/mail_icon.svg";
 import whatsapp_icon from "../assets/whatsapp_icon.svg";
 import message_icon from "../assets/msg-icon.png";
+import Testimonials from "./Testimonials";
 
 const About = () => {
-  const slider = useRef();
-  let tx = 0;
-
-  const slideForward = () => {
-    if (tx > -50) {
-      tx -= 25;
-    }
-    slider.current.style.transform = `translateX(${tx}%)`;
-  };
-
-  const slideBackward = () => {
-    if (tx < 0) {
-      tx += 25;
-    }
-    slider.current.style.transform = `translateX(${tx}%)`;
-  };
-
   return (
     <section className="About">
       <div className="container company_profile">
@@ -63,122 +41,18 @@ const About = () => {
             name in the Lagos real estate market.
           </p>
         </div>
-        <div className="company_image1">
-          <img
-            src={about_duplex}
-            alt="a residential building"
-            loading="lazy"
-            className="about_image"
-          />
+
+        <div className="about_image">
+          <img src={about_duplex} alt="a residential building" loading="lazy" />
         </div>
       </div>
-      <div className="title">
+      <div className="container title">
         <p>Testimonials</p>
         <h2>What Satisfied Clients Are Saying</h2>
       </div>
 
-      <div className="container testimonials">
-        <img
-          src={next_icon}
-          alt=""
-          className="next_btn"
-          onClick={slideForward}
-        />
-        <img
-          src={back_icon}
-          alt=""
-          className="back_btn"
-          onClick={slideBackward}
-        />
+      <Testimonials />
 
-        <div className="slider ">
-          <ul ref={slider}>
-            <li>
-              <div className="slide">
-                <div className="user_info">
-                  <img src={user_1} alt="" />
-                  <div>
-                    <h3>Mona Tomi</h3>
-                    <span>Bankly, Lagos</span>
-                  </div>
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
-                  nihil exercitationem inventore non? Sunt provident magnam quis
-                  sequi nulla optio dolores esse dicta nostrum ea deleniti
-                  aspernatur laborum dolorem delectus minus, laboriosam unde?
-                  Adipisci ratione officiis nesciunt sequi tempora distinctio
-                  nemo itaque, reprehenderit sit, ipsa sunt odit odio natus
-                  fuga.
-                </p>
-              </div>
-            </li>
-
-            <li>
-              <div className="slide">
-                <div className="user_info">
-                  <img src={user_2} alt="" />
-                  <div>
-                    <h3>Akin Williams</h3>
-                    <span>FIN Towers, Lagos</span>
-                  </div>
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
-                  nihil exercitationem inventore non? Sunt provident magnam quis
-                  sequi nulla optio dolores esse dicta nostrum ea deleniti
-                  aspernatur laborum dolorem delectus minus, laboriosam unde?
-                  Adipisci ratione officiis nesciunt sequi tempora distinctio
-                  nemo itaque, reprehenderit sit, ipsa sunt odit odio natus
-                  fuga.
-                </p>
-              </div>
-            </li>
-
-            <li>
-              <div className="slide">
-                <div className="user_info">
-                  <img src={user_3} alt="" />
-                  <div>
-                    <h3>Sami Moreni</h3>
-                    <span>ChopSticks, Lagos</span>
-                  </div>
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
-                  nihil exercitationem inventore non? Sunt provident magnam quis
-                  sequi nulla optio dolores esse dicta nostrum ea deleniti
-                  aspernatur laborum dolorem delectus minus, laboriosam unde?
-                  Adipisci ratione officiis nesciunt sequi tempora distinctio
-                  nemo itaque, reprehenderit sit, ipsa sunt odit odio natus
-                  fuga.
-                </p>
-              </div>
-            </li>
-
-            <li>
-              <div className="slide">
-                <div className="user_info">
-                  <img src={user_4} alt="" />
-                  <div>
-                    <h3>May Fair</h3>
-                    <span>LongHeights, Lagos</span>
-                  </div>
-                </div>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
-                  nihil exercitationem inventore non? Sunt provident magnam quis
-                  sequi nulla optio dolores esse dicta nostrum ea deleniti
-                  aspernatur laborum dolorem delectus minus, laboriosam unde?
-                  Adipisci ratione officiis nesciunt sequi tempora distinctio
-                  nemo itaque, reprehenderit sit, ipsa sunt odit odio natus
-                  fuga.
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
       <div className="title">
         <p>Contact Us</p>
         <h2>Get in Touch</h2>

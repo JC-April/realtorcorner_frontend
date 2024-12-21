@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import useAxios from "../utils/useAxios";
 import { useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
+import "./UpdateProperty.scss";
 
 const UpdateProperty = () => {
   const { slug } = useParams();
@@ -43,11 +44,10 @@ const UpdateProperty = () => {
         });
 
         setMyProperty(property);
-        console.log(property.images);
         setImages(
           property.images.map((image) => ({
             id: image.id,
-            url: `https://realtorcornerbackend.onrender.com/${image.url}`,
+            url: image.url,
           }))
         );
       } catch (error) {
@@ -141,7 +141,7 @@ const UpdateProperty = () => {
   if (!myProperty) return <div>Loading...</div>;
 
   return (
-    <div className="container">
+    <div className="container UpdateProperty">
       <h1>Update Property</h1>
       <form onSubmit={handleSubmit}>
         <input

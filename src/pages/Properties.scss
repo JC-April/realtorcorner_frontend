@@ -16,13 +16,14 @@
 .all-properties {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   margin: 0 auto;
   padding: 20px;
+  align-items: center;
 
   .property-card {
     flex: 0 1 calc((33.333% - 20px));
-    margin-bottom: 20px;
+    margin: 20px;
     padding: 20px;
     border: 4px solid;
     border-radius: 5px;
